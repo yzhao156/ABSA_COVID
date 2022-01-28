@@ -1,0 +1,61 @@
+
+
+
+python run_classifier_TABSA.py ^
+ --task_name Covid_QA_B^
+ --data_dir data/covid/bert-pair/ ^
+ --vocab_file uncased_L-12_H-768_A-12/vocab.txt ^
+ --bert_config_file uncased_L-12_H-768_A-12/bert_config.json ^
+ --init_checkpoint uncased_L-12_H-768_A-12/pytorch_model.bin ^
+ --eval_test ^
+ --do_lower_case ^
+ --max_seq_length 512 ^
+ --train_batch_size 8 ^
+ --learning_rate 2e-5 ^
+ --num_train_epochs 4 ^
+ --output_dir results/covid/QAB^
+ --seed 42
+
+
+ --init_eval_checkpoint results/covid/QA_B_savemodel/model_ep_1.bin
+ 
+
+
+ --do_save_model ^
+
+
+
+python run_classifier_TABSA.py --task_name Covid_NLI_B --do_save_model --data_dir data/covid/bert-pair/ --vocab_file uncased_L-12_H-768_A-12/vocab.txt --bert_config_file uncased_L-12_H-768_A-12/bert_config.json --init_checkpoint uncased_L-12_H-768_A-12/pytorch_model.bin --eval_test --do_lower_case --max_seq_length 512 --train_batch_size 8 --learning_rate 2e-5 --num_train_epochs 0 --output_dir results/covid/NLI_B_savemodel_EVAL --seed 42 --init_eval_checkpoint results/covid/NLI_B_savemodel/model_ep_1.bin
+
+
+task_name = 'Covid_NLI_B',
+data_dir = 'data/covid/bert-pair/ ',
+vocab_file = 'uncased_L-12_H-768_A-12/vocab.txt ',
+bert_config_file = 'uncased_L-12_H-768_A-12/bert_config.json ',
+init_checkpoint = 'uncased_L-12_H-768_A-12/pytorch_model.bin ',
+eval_test = True,
+do_lower_case = True,
+max_seq_length = 512 ,
+train_batch_size = 24 ,
+learning_rate = 2e-5 ,
+num_train_epochs = 0 ,
+output_dir = 'results/covid/NLI_B_EVAL',
+seed = 42,
+init_eval_checkpoint = 'results/covid/NLI_B_savemodel/model_ep_1.bin'
+
+
+        
+        self.task_name = 'Covid_NLI_B'
+        self.data_dir = 'data/covid/bert-pair/ '
+        self.vocab_file = 'uncased_L-12_H-768_A-12/vocab.txt '
+        self.bert_config_file = 'uncased_L-12_H-768_A-12/bert_config.json '
+        self.init_checkpoint = 'uncased_L-12_H-768_A-12/pytorch_model.bin '
+        self.eval_test = True
+        self.do_lower_case = True
+        self.max_seq_length = 512 
+        self.train_batch_size = 24 
+        self.learning_rate = 2e-5 
+        self.num_train_epochs = 0 
+        self.output_dir = 'results/covid/NLI_B_EVAL'
+        self.seed = 42
+        self.init_eval_checkpoint = 'results/covid/NLI_B_savemodel/model_ep_1.bin'
