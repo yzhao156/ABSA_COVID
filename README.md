@@ -9,6 +9,6 @@ sentiment : ['unrelated', 'negative', 'neutral', 'positive']
 ### Results: 
 Accuracy: 84%
 
-![alt text](http://https://github.com/yzhao156/ABSA_BERT_PAIR/edit/master/images/Score.png)
+![alt text](https://raw.githubusercontent.com/yzhao156/ABSA_COVID/master/Images/Scores.png)
 
 The data is extremely imbalance and for most aspects, the data isn't enough. Compare with the Author's approach(BERT), BERT-PAIR didn't perform better. Futher work include research on differet ways to handle the imblance data.
